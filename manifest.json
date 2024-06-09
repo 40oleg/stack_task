@@ -1,15 +1,56 @@
 {
-    "name": "Ophy's To-Do List",
-    "short_name": "OphyToDo",
+    "theme_color": "#9013fe",
+    "background_color": "#9013fe",
+    "display": "standalone",
+    "scope": "/lofimaker/",
+    "start_url": "/lofimaker/",
+    "name": "LofiPro create lofi songs",
+    "short_name": "LofiPro",
+    "description": "Upload your song convert your song to lofi slow and reverbed then play and enjoy ",
     "icons": [
         {
-            "src": "favicon.ico",
-            "sizes": "64x64 32x32 24x24 16x16",
-            "type": "image/x-icon"
-        }
+            "src": "favicon.icon",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.icon",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.icon",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.icon",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+          {
+            "src": "favicon.icon",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+          }
     ],
-    "start_url": "/",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "screenshots": [
+        {
+          "src": "/lofimaker/screenshot1.jpg",
+          "type": "image/jpeg"
+        },
+        {
+          "src": "/lofimaker/screenshot2.jpg",
+          "type": "image/jpeg"
+        },
+        {
+          "src": "/lofimaker/screenshot3.jpg",
+          "type": "image/jpeg"
+        },
+        {
+          "src": "/lofimaker/screenshot4.jpg",
+          "type": "image/jpeg"
+        }
+      ]
 }
