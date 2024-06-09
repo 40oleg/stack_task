@@ -2,10 +2,10 @@
     "theme_color": "#9013fe",
     "background_color": "#9013fe",
     "display": "standalone",
-    "scope": "/lofimaker/",
-    "start_url": "/lofimaker/",
-    "name": "LofiPro create lofi songs",
-    "short_name": "LofiPro",
+    "scope": "/stack_task/",
+    "start_url": "/stack_task/",
+    "name": "Stack Task",
+    "short_name": "StackTask",
     "description": "Upload your song convert your song to lofi slow and reverbed then play and enjoy ",
     "icons": [
         {

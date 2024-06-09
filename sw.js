@@ -5,11 +5,11 @@ const CACHE_VERSION = 'v1';
 
 // Files to cache
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/images/logo.png',
+  'stack_task/',
+  'stack_task/index.html',
+  'stack_task/styles.css',
+  'stack_task/script.js',
+  'stack_task/images/logo.png',
 ];
 
 // Install service worker
