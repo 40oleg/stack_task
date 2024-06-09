@@ -11,6 +11,12 @@
 <body>
   <app-root></app-root>
 
-  <script src="service-worker.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register(
+      '/sw.js'
+    );
+  }
+</script>
 <script src="polyfills-6EAL64PA.js" type="module"></script><script src="main-7TKKVRK3.js" type="module"></script></body>
 </html>
