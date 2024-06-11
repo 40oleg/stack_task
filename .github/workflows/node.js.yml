@@ -30,7 +30,7 @@ jobs:
     - run: ls
     - run: git fetch
     - run: git checkout gh-pages
-    - run: mv -R ./dist/stack_task ./
+    - run: mv ./dist/stack_task/* ./
     - run: git config --global user.name "github-actions"
     - run: git config --global user.email "github-actions@github.com"
     - run: git add .
