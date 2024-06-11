@@ -35,5 +35,4 @@ jobs:
     - run: git config --global user.email "github-actions@github.com"
     - run: git add .
     - run: git commit -m "BUILD COMMIT"
-    - run: git remote add origin https://github.com/40oleg/stack_task.git
     - run: git push origin main:gh-pages --force
