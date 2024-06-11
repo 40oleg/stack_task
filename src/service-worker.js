@@ -1,10 +1,8 @@
 self.addEventListener('install', function(event) {
-    // Perform install steps
     var CACHE_NAME = 'ophy-todo-cache-v1';
     var urlsToCache = [
         '/',
-        '/styles.css',
-        '/app.js'
+        './index.html',
     ];
   
     event.waitUntil(
