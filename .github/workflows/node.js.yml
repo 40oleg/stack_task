@@ -40,4 +40,4 @@ jobs:
     - run: git config --global user.email "github-actions@github.com"
     - run: git add .
     - run: git commit -m "BUILD COMMIT"
-    - run: git push origin main:gh-pages --force
+    - run: git push --force
