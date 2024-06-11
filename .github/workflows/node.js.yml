@@ -27,6 +27,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
+    - run: ls
+    - run: git fetch
     - run: git checkout gh-pages
     - run: mv -R ./dist/stack_task ./
     - run: git config --global user.name "github-actions"
