@@ -38,7 +38,7 @@ jobs:
     - run: mkdir ../tmp
     - run: mv ./dist/stack_task/* ../tmp
     - run: rm -rf ./*
-    - run: mv ../tmp ./
+    - run: mv ../tmp/browser/* ./
     - run: git config --global user.name "github-actions"
     - run: git config --global user.email "github-actions@github.com"
     - run: git add .
