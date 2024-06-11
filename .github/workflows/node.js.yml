@@ -31,7 +31,7 @@ jobs:
       env:
         TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
     - run: npm ci
-    - run: npm run build
+    - run: npm run build -- --base-href https://40oleg.github.io/stack_task/
     - run: ls
     - run: git fetch
     - run: git checkout gh-pages
