@@ -18,6 +18,9 @@ jobs:
       matrix:
         node-version: [22.x]
 
+    permissions:
+      contents: write
+      pages: write
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
