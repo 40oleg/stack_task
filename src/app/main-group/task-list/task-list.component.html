@@ -1,5 +1,8 @@
 @for(item of tasks; track item) {
-    <div>{{item}}</div>
+    <div style="display: flex; justify-content: space-between; width: 98vw; margin: 10px;">
+        <div>{{item}}</div>
+        <div (click)="removeTask(item)">Завершить</div>
+    </div>
 }
 
 <input #taskName pInputText placeholder="Введите задачу"/>

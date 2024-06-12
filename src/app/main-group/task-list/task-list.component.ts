@@ -25,6 +25,11 @@ export class TaskListComponent {
     this.saveState();
   }
 
+  public removeTask(taskName: string): void {
+    this.tasks.splice(this.tasks.findIndex(el => el === taskName), 1);
+    this.saveState();
+  }
+
   private saveState() {
     localStorage.setItem(this.#taskListKey, JSON.stringify(this.tasks))
   }
