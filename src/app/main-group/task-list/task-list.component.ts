@@ -1,14 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { ListboxModule } from 'primeng/listbox';
+import { TuiButtonModule } from '@taiga-ui/core';
+import { TuiInputModule, TuiIslandModule } from '@taiga-ui/kit';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [ButtonModule, InputTextModule, ListboxModule],
+  imports: [TuiButtonModule, TuiInputModule, TuiIslandModule],
   templateUrl: './task-list.component.html',
-  styleUrl: './task-list.component.scss',
+  styleUrl: './task-list.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TaskListComponent {

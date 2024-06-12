@@ -1,9 +1,29 @@
 @for(item of tasks; track item) {
-    <div style="display: flex; justify-content: space-between; width: 98vw; margin: 10px;">
-        <div>{{item}}</div>
-        <div (click)="removeTask(item)">Завершить</div>
-    </div>
+    <tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
+        <h3 class="tui-island__title">{{item}}</h3>
+        <p class="tui-island__paragraph">
+           
+        </p>
+        <button
+            appearance="flat"
+            size="m"
+            tuiButton
+            type="button"
+            class="tui-island__footer-button"
+            (click)="removeTask(item)"
+        >
+        Завершить
+        </button>
+    </tui-island>
 }
 
-<input #taskName pInputText placeholder="Введите задачу"/>
-<p-button (click)="addTask(taskName.value); taskName.value = '';">Добавить задачу</p-button>
+
+<div class="tui-space_vertical-2 tui-space_horizontal-2">
+    <tui-input #taskName>
+        Введите задачу
+        <input
+            tuiTextfield
+        />
+    </tui-input>
+    <button class="tui-space_top-2" tuiButton (click)="addTask(taskName.value); taskName.value = '';">Добавить задачу</button>
+</div>

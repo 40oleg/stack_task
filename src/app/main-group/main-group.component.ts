@@ -6,7 +6,7 @@ import { TaskListComponent } from './task-list/task-list.component';
   standalone: true,
   imports: [TaskListComponent],
   templateUrl: './main-group.component.html',
-  styleUrl: './main-group.component.scss',
+  styleUrl: './main-group.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainGroupComponent {
