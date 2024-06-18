@@ -16,7 +16,5 @@ import { SwUpdate } from "@angular/service-worker";
 })
 export class AppComponent {
   title = 'stack_task';
-  constructor(public swUpdate: SwUpdate) {
-    alert(this.swUpdate.isEnabled)
-  }
+  constructor(public swUpdate: SwUpdate) {}
 }
