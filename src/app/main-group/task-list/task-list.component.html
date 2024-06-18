@@ -1,8 +1,7 @@
-@for(item of tasks; track item) {
+@for(item of tasks; track item.uuid) {
     <tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
-        <h3 class="tui-island__title">{{item}}</h3>
+        <h3 class="tui-island__title">{{item.name}}</h3>
         <p class="tui-island__paragraph">
-           
         </p>
         <button
             appearance="flat"
@@ -10,7 +9,7 @@
             tuiButton
             type="button"
             class="tui-island__footer-button"
-            (click)="removeTask(item)"
+            (click)="removeTask(item.uuid)"
         >
         Завершить
         </button>

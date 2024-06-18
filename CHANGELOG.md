@@ -1,6 +1,7 @@
 # v1.0.0 [In progress]
 ### Bussines features
 1. Mobile application support. You can now download application from it's website
+2. All history task saving for future using (checking completed tasks, etc.)
 ### Technical features
 1. Using TaigaUI instead of PrimeNG
 
