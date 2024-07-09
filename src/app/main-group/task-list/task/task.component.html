@@ -1,0 +1,30 @@
+<tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
+    <h3 class="tui-island__title">{{task.name}}</h3>
+    <p class="tui-island__paragraph">
+    </p>
+    @if (deletePendingCounter() === Infinity) {
+        <button
+            #completeButton
+            appearance="flat"
+            size="m"
+            tuiButton
+            type="button"
+            class="tui-island__footer-button qwe1"
+            (click)="markAsCompleted()"
+        >
+        Завершить
+        </button>
+    } @else {
+        <button
+            #completeButton
+            appearance="secondary-destructive"
+            size="m"
+            tuiButton
+            type="button"
+            class="tui-island__footer-button qwe1"
+            (click)="markAsNotCompleted()"
+        >
+        Отменить? Завершение через {{deletePendingCounter()}} с.
+        </button>
+    }
+</tui-island>
