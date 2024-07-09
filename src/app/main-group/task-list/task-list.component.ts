@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TuiButtonModule } from '@taiga-ui/core';
-import { TuiInputModule, TuiIslandModule } from '@taiga-ui/kit';
+import { TuiInputModule } from '@taiga-ui/kit';
 import { Task } from '../../../types/Task';
+import { TaskComponent } from './task/task.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [TuiButtonModule, TuiInputModule, TuiIslandModule],
+  imports: [TuiInputModule, TuiButtonModule, TaskComponent],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -44,7 +45,7 @@ export class TaskListComponent {
   private restoreState() {
     try {
       this.#tasks = JSON.parse(localStorage.getItem(this.#taskListKey) || '');
-      // @todo Delete in v2. Parsing previous version of Task interface
+      // @todo Delete in v3. Parsing previous version of Task interface
       this.#tasks = this.#tasks.map(task => typeof task === 'string' ? this.createNewTask(task) : task);
     } catch (error) {
       console.log('Sorry, problem with restoring tasks happend')

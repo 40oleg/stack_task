@@ -1,24 +1,11 @@
 @for(item of tasks; track item.uuid) {
-    <tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
-        <h3 class="tui-island__title">{{item.name}}</h3>
-        <p class="tui-island__paragraph">
-        </p>
-        <button
-            appearance="flat"
-            size="m"
-            tuiButton
-            type="button"
-            class="tui-island__footer-button"
-            (click)="removeTask(item.uuid)"
-        >
-        Завершить
-        </button>
-    </tui-island>
+    <app-task 
+    [task]="item"
+    (removeTask)="removeTask($event)"></app-task>
 }
 
-
-<div class="tui-space_vertical-2 tui-space_horizontal-2">
-    <tui-input #taskName>
+<div class="tui-space_vertical-2 tui-space_horizontal-2 input-block">
+    <tui-input #taskName class="w-100">
         Введите задачу
         <input
             tuiTextfield
