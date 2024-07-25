@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1720544924532,
+  "timestamp": 1721926855710,
   "index": "https://40oleg.github.io/stack_task/index.html",
   "assetGroups": [
     {
@@ -2486,9 +2486,9 @@
     "https://40oleg.github.io/stack_task/assets/taiga-ui/icons/tuiIconZoomOutOutline.svg": "649232602165b4880fe74e2c1fc59c37a5c76ea8",
     "https://40oleg.github.io/stack_task/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "https://40oleg.github.io/stack_task/favicon.png": "4d057889f6ce0acd89ec38e08f0de4b5d5dd6e8b",
-    "https://40oleg.github.io/stack_task/index.html": "6071e12e19e54cbe3279a013a526ae3e520c67b3",
+    "https://40oleg.github.io/stack_task/index.html": "bd3a603c574d3e39561889535e13fb23bf1a715e",
     "https://40oleg.github.io/stack_task/main-D6K2WEI6.js": "c4a1b2451d4ada9677b793b7f39331921c34928b",
-    "https://40oleg.github.io/stack_task/manifest.webmanifest": "1293a873e4a8d8b929c7190f232f4cbdb4b7ba21",
+    "https://40oleg.github.io/stack_task/manifest.webmanifest": "dc555946b5f41045ddcabc87f3886ba95a29e1ce",
     "https://40oleg.github.io/stack_task/polyfills-6EAL64PA.js": "d874147a12a6570d9b44e99935e9de8b7f3cabbc",
     "https://40oleg.github.io/stack_task/styles-DKNTTYIW.css": "03b0f2ad06b23ecb19df4205ca726e4bd57b9394"
   },
