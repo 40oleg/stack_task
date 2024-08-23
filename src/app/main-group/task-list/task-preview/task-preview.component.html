@@ -1,7 +1,10 @@
 <tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
     <div class="row">
-        <h3 class="tui-island__title">{{task.name}}</h3>
-        <tui-icon icon="@tui.pencil"></tui-icon>
+        <div>
+            <h3 class="tui-island__title">{{task.name}}</h3>
+            <pre>{{task.description}}</pre>
+        </div>
+        <tui-icon (click)="editTask(task)" class="edit-icon" icon="@tui.pencil"></tui-icon>
     </div>
     <p class="tui-island__paragraph">
     </p>

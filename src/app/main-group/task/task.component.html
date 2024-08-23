@@ -1,0 +1,14 @@
+<tui-textfield>
+    <input
+    tuiTextfield
+    [formControl]="name"
+    [invalid]="!!name.errors"/>
+    <label>Название</label>
+</tui-textfield>
+<tui-textarea
+    [formControl]="description"
+    class="tui-space_top-4"
+    [expandable]="true">
+    Описание
+</tui-textarea>
+<button (click)="submit()" tuiButton class="tui-space_top-4">Сохранить</button>

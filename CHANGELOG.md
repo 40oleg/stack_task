@@ -9,6 +9,7 @@
 ### Bussines features
 1. Undo operation for finished tasks. You are able to return a task to list by button if you close it by mistake
 2. Make edit button for tasks
+3. Forbid to create empty tasks
 ### Technical features
 2. Make a clear description of the project
 

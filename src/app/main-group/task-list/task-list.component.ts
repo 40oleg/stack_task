@@ -1,13 +1,13 @@
+import { TuiInputModule } from "@taiga-ui/legacy";
+import { TuiButton } from "@taiga-ui/core";
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { TuiButtonModule } from '@taiga-ui/core';
-import { TuiInputModule } from '@taiga-ui/kit';
 import { Task } from '../../../types/Task';
-import { TaskComponent } from './task/task.component';
+import { TaskPreviewComponent } from './task-preview/task-preview.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [TuiInputModule, TuiButtonModule, TaskComponent],
+  imports: [TuiInputModule, TuiButton, TaskPreviewComponent],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -34,8 +34,18 @@ export class TaskListComponent {
     const task = this.#tasks.find(el => el.uuid === uuid);
     if(task) {
       task.hidden = true;
-    } 
+    }
     this.saveState();
+  }
+
+  protected updateTask(task: Task) {
+    const foundTaskIndex = this.#tasks.findIndex(el => el.uuid === task.uuid);
+    if(foundTaskIndex !== -1) {
+      this.#tasks.splice(foundTaskIndex, 1, task);
+      this.saveState();
+    } else {
+      console.log('Nothing changed');
+    }
   }
 
   private saveState() {
