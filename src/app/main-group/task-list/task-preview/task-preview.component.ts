@@ -34,6 +34,9 @@ export class TaskPreviewComponent {
     @Input('task')
     task!: Task;
 
+    @Input('allTasks')
+    allTasks: Task[] = [];
+
     @Output('removeTask')
     removeTaskEmitter: EventEmitter<string> = new EventEmitter();
 
@@ -42,6 +45,10 @@ export class TaskPreviewComponent {
 
     get Infinity() {
         return Infinity;
+    }
+
+    get children(): Task[] {
+        return this.allTasks.filter((el) => el.parentId === this.task.uuid);
     }
 
     markAsCompleted() {
@@ -56,7 +63,7 @@ export class TaskPreviewComponent {
         const comp = new PolymorpheusComponent(TaskComponent, this.injector);
         this.dialogs
             .open(comp, {
-                data: task,
+                data: { task, allTasks: this.allTasks },
             })
             .subscribe({
                 next: (newTask: any) => {

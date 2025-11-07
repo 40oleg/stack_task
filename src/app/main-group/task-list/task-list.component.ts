@@ -19,6 +19,10 @@ export class TaskListComponent {
         return this.#tasks.filter((task) => !task.hidden);
     }
 
+    get topLevelTasks(): Task[] {
+        return this.#tasks.filter((task) => !task.hidden).filter((task) => !task.parentId);
+    }
+
     #taskListKey = 'taskList';
 
     constructor() {
@@ -71,6 +75,7 @@ export class TaskListComponent {
             description: '',
             hidden: false,
             createTime: Date.now(),
+            parentId: null,
         };
     }
 }

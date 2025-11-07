@@ -1,9 +1,10 @@
-@for (item of tasks; track item.uuid) {
-    <app-task-preview
-        [task]="item"
-        (updateTask)="updateTask($event)"
-        (removeTask)="removeTask($event)"
-    ></app-task-preview>
+@for (item of topLevelTasks; track item.uuid) {
+<app-task-preview
+    [task]="item"
+    [allTasks]="tasks"
+    (updateTask)="updateTask($event)"
+    (removeTask)="removeTask($event)"
+></app-task-preview>
 }
 
 <div class="tui-space_vertical-2 tui-space_horizontal-2 input-block">
