@@ -1,0 +1,39 @@
+{
+    "printWidth": 100,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "as-needed",
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": "*.component.html",
+            "options": {
+                "parser": "angular"
+            }
+        },
+        {
+            "files": "*.component.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": "*.service.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": "*.spec.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        }
+    ]
+}

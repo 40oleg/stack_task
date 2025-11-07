@@ -4,4 +4,4 @@ export type Task = {
     description: string;
     hidden: boolean;
     createTime: number;
-}
+};

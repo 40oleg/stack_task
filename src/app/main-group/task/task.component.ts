@@ -3,52 +3,53 @@ import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TuiButton, TuiDialogContext, TuiTextfield } from '@taiga-ui/core';
 import { Task } from '../../../types/Task';
 import { TuiTextareaModule } from '@taiga-ui/legacy';
-import {POLYMORPHEUS_CONTEXT} from '@taiga-ui/polymorpheus';
+import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
-  selector: 'app-task',
-  standalone: true,
-  imports: [TuiTextfield, TuiButton, ReactiveFormsModule, TuiTextareaModule],
-  templateUrl: './task.component.html',
-  styleUrl: './task.component.less'
+    selector: 'app-task',
+    standalone: true,
+    imports: [TuiTextfield, TuiButton, ReactiveFormsModule, TuiTextareaModule],
+    templateUrl: './task.component.html',
+    styleUrl: './task.component.less',
 })
 export class TaskComponent {
-  private readonly context =
-        inject<TuiDialogContext<Task, Task>>(POLYMORPHEUS_CONTEXT);
+    private readonly context = inject<TuiDialogContext<Task, Task>>(POLYMORPHEUS_CONTEXT);
 
-  task!: Task;
-  
-  protected name: FormControl<string>;
-  protected description: FormControl<string>;
+    task!: Task;
 
-  private destroy$: Subject<null> = new Subject();
+    protected name: FormControl<string>;
+    protected description: FormControl<string>;
 
-  constructor() {
-    this.name = new FormControl('', [Validators.required]) as FormControl<string>;
-    this.description = new FormControl('') as FormControl<string>;
-  }
+    private destroy$: Subject<null> = new Subject();
 
-  ngOnInit() {
-    this.task = structuredClone(this.context.data);
-    this.name.setValue(this.task.name);
-    this.description.setValue(this.task.description)
-    this.name.valueChanges.pipe(takeUntil(this.destroy$)).subscribe((newName: string) => {
-      this.task.name = newName;
-    })
-    this.description.valueChanges.pipe(takeUntil(this.destroy$)).subscribe((newDescription: string) => {
-      this.task.description = newDescription;
-    })
-  }
-
-  submit() {
-    if(this.name.valid) {
-      this.context.completeWith(this.task);
-    } else {
+    constructor() {
+        this.name = new FormControl('', [Validators.required]) as FormControl<string>;
+        this.description = new FormControl('') as FormControl<string>;
     }
-  }
 
-  ngOnDestroy() {
-    this.destroy$.next(null);
-  }
+    ngOnInit() {
+        this.task = structuredClone(this.context.data);
+        this.name.setValue(this.task.name);
+        this.description.setValue(this.task.description);
+        this.name.valueChanges.pipe(takeUntil(this.destroy$)).subscribe((newName: string) => {
+            this.task.name = newName;
+        });
+        this.description.valueChanges
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((newDescription: string) => {
+                this.task.description = newDescription;
+            });
+    }
+
+    submit() {
+        if (this.name.valid) {
+            this.context.completeWith(this.task);
+        } else {
+        }
+    }
+
+    ngOnDestroy() {
+        this.destroy$.next(null);
+    }
 }

@@ -1,13 +1,12 @@
 <tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
     <div class="row">
         <div>
-            <h3 class="tui-island__title">{{task.name}}</h3>
-            <pre>{{task.description}}</pre>
+            <h3 class="tui-island__title">{{ task.name }}</h3>
+            <pre>{{ task.description }}</pre>
         </div>
         <tui-icon (click)="editTask(task)" class="edit-icon" icon="@tui.pencil"></tui-icon>
     </div>
-    <p class="tui-island__paragraph">
-    </p>
+    <p class="tui-island__paragraph"></p>
     @if (deletePendingCounter() === Infinity) {
         <button
             #completeButton
@@ -18,7 +17,7 @@
             class="tui-island__footer-button qwe1"
             (click)="markAsCompleted()"
         >
-        Завершить
+            Завершить
         </button>
     } @else {
         <button
@@ -30,7 +29,7 @@
             class="tui-island__footer-button qwe1"
             (click)="markAsNotCompleted()"
         >
-        Отменить? Завершение через {{deletePendingCounter()}} с.
+            Отменить? Завершение через {{ deletePendingCounter() }} с.
         </button>
     }
 </tui-island>
