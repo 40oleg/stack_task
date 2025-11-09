@@ -6,30 +6,28 @@ import { TuiTextareaModule } from '@taiga-ui/legacy';
 import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
 import { Subject, takeUntil } from 'rxjs';
 import { TuiDataListWrapper } from '@taiga-ui/kit/components/data-list-wrapper';
-import { NgIf } from '@angular/common';
+
 import { TuiTooltip } from '@taiga-ui/kit/directives/tooltip';
 import { TuiSelect } from '@taiga-ui/kit';
 
 @Component({
     selector: 'app-task',
-    standalone: true,
     imports: [
-        TuiTextfield,
-        TuiButton,
-        ReactiveFormsModule,
-        TuiTextareaModule,
-        FormsModule,
-        TuiDataListWrapper,
-        TuiIcon,
-        NgIf,
-        TuiTextfield,
-        TuiTooltip,
-        TuiSelect,
-        TuiButton,
-    ],
+    TuiTextfield,
+    TuiButton,
+    ReactiveFormsModule,
+    TuiTextareaModule,
+    FormsModule,
+    TuiDataListWrapper,
+    TuiIcon,
+    TuiTextfield,
+    TuiTooltip,
+    TuiSelect,
+    TuiButton
+],
     templateUrl: './task.component.html',
     styleUrl: './task.component.less',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TaskComponent {
     private readonly context =

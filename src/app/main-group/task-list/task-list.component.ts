@@ -6,11 +6,10 @@ import { TaskPreviewComponent } from './task-preview/task-preview.component';
 
 @Component({
     selector: 'app-task-list',
-    standalone: true,
     imports: [TuiInputModule, TuiButton, TaskPreviewComponent],
     templateUrl: './task-list.component.html',
     styleUrl: './task-list.component.less',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TaskListComponent {
     #tasks: Task[] = [];

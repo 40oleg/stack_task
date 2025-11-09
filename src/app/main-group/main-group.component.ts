@@ -3,10 +3,9 @@ import { TaskListComponent } from './task-list/task-list.component';
 
 @Component({
     selector: 'app-main-group',
-    standalone: true,
     imports: [TaskListComponent],
     templateUrl: './main-group.component.html',
     styleUrl: './main-group.component.less',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainGroupComponent {}

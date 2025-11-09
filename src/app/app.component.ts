@@ -8,12 +8,11 @@ import { SwUpdate } from '@angular/service-worker';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     imports: [RouterOutlet, MainGroupComponent, TuiRoot, TuiDialog, TuiAlert],
     templateUrl: './app.component.html',
     styleUrl: './app.component.less',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [{ provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
+    providers: [{ provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }]
 })
 export class AppComponent {
     title = 'stack_task';

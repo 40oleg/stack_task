@@ -8,10 +8,9 @@ import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 
 @Component({
     selector: 'app-task-preview',
-    standalone: true,
     imports: [TuiButton, TuiIslandDirective, TuiGroup, TuiInputModule, TuiIcon],
     templateUrl: './task-preview.component.html',
-    styleUrl: './task-preview.component.less',
+    styleUrl: './task-preview.component.less'
 })
 export class TaskPreviewComponent {
     deletePendingCounter = signal(Infinity);
