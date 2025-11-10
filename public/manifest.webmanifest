@@ -1,12 +1,12 @@
 {
-    "name": "stack_task",
-    "short_name": "stack_task",
-    "theme_color": "#1976d2",
-    "background_color": "#fafafa",
-    "display": "standalone",
-    "scope": "./",
-    "start_url": "./",
-    "icons": [
+  "name": "Stack",
+  "short_name": "Stack",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+ "icons": [
         {
             "src": "icons/icon-72x72.png",
             "sizes": "72x72",
