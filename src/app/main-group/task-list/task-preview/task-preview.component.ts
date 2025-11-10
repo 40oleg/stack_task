@@ -10,7 +10,7 @@ import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
     selector: 'app-task-preview',
     imports: [TuiButton, TuiIslandDirective, TuiGroup, TuiInputModule, TuiIcon],
     templateUrl: './task-preview.component.html',
-    styleUrl: './task-preview.component.less'
+    styleUrl: './task-preview.component.less',
 })
 export class TaskPreviewComponent {
     deletePendingCounter = signal(Infinity);
@@ -73,6 +73,17 @@ export class TaskPreviewComponent {
                     console.info('Dialog closed');
                 },
             });
+    }
+
+    formatDate(date: number): string {
+        const now = new Date(date);
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = String(now.getFullYear()).slice(-2);
+        const formatted = `${hours}:${minutes} ${day}.${month}.${year}`;
+        return formatted;
     }
 
     ngOnDestroy() {
