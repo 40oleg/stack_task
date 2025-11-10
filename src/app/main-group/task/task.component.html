@@ -1,0 +1,31 @@
+<tui-textfield class="tui-space_top-8">
+  <input tuiTextfield [formControl]="name" [invalid]="!!name.errors" />
+  <label>Название</label>
+</tui-textfield>
+
+<tui-textarea [formControl]="description" class="tui-space_top-4" [expandable]="true">
+  Описание
+</tui-textarea>
+
+<tui-textfield tuiTextfieldSize="m" class="tui-space_top-4" [stringify]="stringify">
+  <input placeholder="Родительская задача" tuiSelect [(ngModel)]="parentTask" />
+
+  <tui-data-list-wrapper *tuiTextfieldDropdown new [items]="allTasks" [itemContent]="content" />
+
+  @if (parentTask) {
+    <tui-icon
+      icon="@tui.badge-check"
+      style="color: var(--tui-status-info); pointer-events: none"
+      />
+  }
+
+  <tui-icon tuiTooltip="Для создания иерархии задач" />
+</tui-textfield>
+
+<button (click)="submit()" tuiButton class="tui-space_top-4">Сохранить</button>
+
+<ng-template #content let-task>
+  <div>
+    {{ task.name }}
+  </div>
+</ng-template>

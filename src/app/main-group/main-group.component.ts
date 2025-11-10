@@ -2,13 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TaskListComponent } from './task-list/task-list.component';
 
 @Component({
-  selector: 'app-main-group',
-  standalone: true,
-  imports: [TaskListComponent],
-  templateUrl: './main-group.component.html',
-  styleUrl: './main-group.component.less',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-main-group',
+    imports: [TaskListComponent],
+    templateUrl: './main-group.component.html',
+    styleUrl: './main-group.component.less',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MainGroupComponent {
-
-}
+export class MainGroupComponent {}

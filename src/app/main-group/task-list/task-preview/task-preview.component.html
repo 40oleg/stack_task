@@ -1,0 +1,47 @@
+<tui-island class="tui-space_vertical-2 tui-space_horizontal-2">
+    <div class="row">
+        <div>
+            <h3 class="tui-island__title">
+                {{ task.name }}
+            </h3>
+            <pre>{{ task.description }}</pre>
+        </div>
+        <tui-icon (click)="editTask(task)" class="edit-icon" icon="@tui.pencil"></tui-icon>
+    </div>
+    <p class="tui-island__paragraph"></p>
+    <div class="date">
+        <span>{{ formatDate(task.createTime) }}</span>
+    </div>
+    @for (childTask of children; track task.uuid) {
+    <app-task-preview
+        [task]="childTask"
+        [allTasks]="allTasks"
+        (updateTask)="updateTaskEmitter.emit($event)"
+        (removeTask)="removeTaskEmitter.emit($event)"
+    ></app-task-preview>
+    } @if (deletePendingCounter() === Infinity) {
+    <button
+        #completeButton
+        appearance="flat"
+        size="m"
+        tuiButton
+        type="button"
+        class="tui-island__footer-button qwe1"
+        (click)="markAsCompleted()"
+    >
+        Завершить
+    </button>
+    } @else {
+    <button
+        #completeButton
+        appearance="secondary-destructive"
+        size="m"
+        tuiButton
+        type="button"
+        class="tui-island__footer-button qwe1"
+        (click)="markAsNotCompleted()"
+    >
+        Отменить? Завершение через {{ deletePendingCounter() }} с.
+    </button>
+    }
+</tui-island>

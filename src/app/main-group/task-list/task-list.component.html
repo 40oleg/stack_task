@@ -1,15 +1,22 @@
-@for(item of tasks; track item.uuid) {
-    <app-task 
+@for (item of topLevelTasks; track item.uuid) {
+<app-task-preview
     [task]="item"
-    (removeTask)="removeTask($event)"></app-task>
+    [allTasks]="tasks"
+    (updateTask)="updateTask($event)"
+    (removeTask)="removeTask($event)"
+></app-task-preview>
 }
 
 <div class="tui-space_vertical-2 tui-space_horizontal-2 input-block">
     <tui-input #taskName class="w-100">
         Введите задачу
-        <input
-            tuiTextfield
-        />
+        <input tuiTextfieldLegacy />
     </tui-input>
-    <button class="tui-space_top-2" tuiButton (click)="addTask(taskName.value); taskName.value = '';">Добавить задачу</button>
+    <button
+        class="tui-space_top-2"
+        tuiButton
+        (click)="addTask(taskName.value); taskName.value = ''"
+    >
+        Добавить задачу
+    </button>
 </div>
