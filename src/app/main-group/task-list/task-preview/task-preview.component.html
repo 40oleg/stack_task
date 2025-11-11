@@ -4,7 +4,7 @@
             <h3 class="tui-island__title">
                 {{ task.name }}
             </h3>
-            <pre>{{ task.description }}</pre>
+            <div style="white-space: pre-line">{{ task.description }}</div>
         </div>
         <tui-icon (click)="editTask(task)" class="edit-icon" icon="@tui.pencil"></tui-icon>
     </div>
