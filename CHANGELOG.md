@@ -20,6 +20,12 @@
 
 1. Update Taiga UI to 4.60 and Angular to v20
 
+# v2.0.1 [In progress]
+
+### Fixes
+
+1. Long names broke layout
+
 # v3.0.0 [Later]
 
 ### Bussines features
