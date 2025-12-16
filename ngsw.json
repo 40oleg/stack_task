@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1762884562480,
+  "timestamp": 1765915245569,
   "index": "https://40oleg.github.io/stack_task/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://40oleg.github.io/stack_task/favicon.ico",
         "https://40oleg.github.io/stack_task/index.html",
-        "https://40oleg.github.io/stack_task/main-QY43JYKZ.js",
+        "https://40oleg.github.io/stack_task/main-MMCJT3LJ.js",
         "https://40oleg.github.io/stack_task/manifest.webmanifest",
         "https://40oleg.github.io/stack_task/polyfills-5CFQRCPP.js",
         "https://40oleg.github.io/stack_task/styles-UHI7UJI7.css"
@@ -8040,8 +8040,8 @@
     "https://40oleg.github.io/stack_task/assets/taiga-ui/icons/zoom-out.svg": "d3bd47ee87f118fbc4a21d8c38ec7b77ce2b89fd",
     "https://40oleg.github.io/stack_task/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "https://40oleg.github.io/stack_task/favicon.png": "4d057889f6ce0acd89ec38e08f0de4b5d5dd6e8b",
-    "https://40oleg.github.io/stack_task/index.html": "3962cfcbe82ea1ea95853c5b3cf4c658259e10d4",
-    "https://40oleg.github.io/stack_task/main-QY43JYKZ.js": "f03841ef6297a0844b60c604e3927703ad4c660d",
+    "https://40oleg.github.io/stack_task/index.html": "935c5db48e789085ab58ef09d685a5bb51ea607f",
+    "https://40oleg.github.io/stack_task/main-MMCJT3LJ.js": "3f343b3a732c58dabd5a273f01daf11c412e0d97",
     "https://40oleg.github.io/stack_task/manifest.webmanifest": "2b87865a2ce01e4bb561a36774f1aeac5a4267bb",
     "https://40oleg.github.io/stack_task/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
     "https://40oleg.github.io/stack_task/styles-UHI7UJI7.css": "86a8ebc85f521656fc21c0e4bb2de33c3f650502"
