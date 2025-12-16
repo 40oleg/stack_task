@@ -20,11 +20,17 @@
 
 1. Update Taiga UI to 4.60 and Angular to v20
 
-# v2.0.1 [In progress]
+# v2.0.1 [Done]
 
 ### Fixes
 
 1. Long names broke layout
+
+# v2.1.0 [Done]
+
+### Fixes
+
+1. Tasks now stay in two-column layout, and the last odd task keeps half-width instead of stretching across the grid
 
 # v3.0.0 [Later]
 
